@@ -1,4 +1,6 @@
-﻿using System.Windows;
+﻿using System.Diagnostics;
+using System.Reflection;
+using System.Windows;
 
 namespace PawnPlus.Views
 {
@@ -10,6 +12,10 @@ namespace PawnPlus.Views
         public MainView()
         {
             InitializeComponent();
+
+            Assembly test = Assembly.GetExecutingAssembly();
+            FileVersionInfo version = FileVersionInfo.GetVersionInfo(test.Location);
+            MessageBox.Show($"FileVersion: {version.FileVersion} | ProductVersion: {version.ProductVersion} | Version: {test.GetName().Version.ToString()}");
         }
     }
 }
