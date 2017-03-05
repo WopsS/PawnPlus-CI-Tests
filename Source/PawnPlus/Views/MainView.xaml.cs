@@ -1,7 +1,6 @@
 ﻿using System.Diagnostics;
 using System.Reflection;
 using System.Windows;
-using ICSharpCode.AvalonEdit;
 
 namespace PawnPlus.Views
 {
