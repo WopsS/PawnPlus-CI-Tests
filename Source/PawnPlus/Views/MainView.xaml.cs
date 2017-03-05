@@ -17,8 +17,6 @@ namespace PawnPlus.Views
             Assembly test = Assembly.GetExecutingAssembly();
             FileVersionInfo version = FileVersionInfo.GetVersionInfo(test.Location);
             MessageBox.Show($"FileVersion: {version.FileVersion} | ProductVersion: {version.ProductVersion} | Version: {test.GetName().Version.ToString()}");
-
-            TextEditor a = new TextEditor();
         }
     }
 }
