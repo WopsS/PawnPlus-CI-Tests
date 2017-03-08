@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
 using System.Reflection;
 using System.Windows;
+using ICSharpCode.AvalonEdit;
 
 namespace PawnPlus.Views
 {
@@ -16,6 +17,8 @@ namespace PawnPlus.Views
             Assembly test = Assembly.GetExecutingAssembly();
             FileVersionInfo version = FileVersionInfo.GetVersionInfo(test.Location);
             MessageBox.Show($"FileVersion: {version.FileVersion} | ProductVersion: {version.ProductVersion} | Version: {test.GetName().Version.ToString()}");
+
+            TextEditor editor = new TextEditor();
         }
     }
 }
